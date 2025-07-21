@@ -2,7 +2,20 @@
 [class^="ProductBrandingTeamEditionContainer"] {
 	display: none !important;
 }
+/* Скрываем кнопку помощи */
+#helpMenuPortal {
+	display: none !important;
+}
 
+/* Альтернативный селектор на случай если ID изменится */
+.MenuWrapper.userGuideHelp {
+	display: none !important;
+}
+
+/* Скрываем любые кнопки с иконкой help-circle-outline */
+button:has(.icon-help-circle-outline) {
+	display: none !important;
+}
 /* Скрываем логотип на странице входа с free бейджем */
 .header-logo-link:has(> .freeBadge) {
 	/* Не скрываем весь элемент, будем заменять содержимое */
