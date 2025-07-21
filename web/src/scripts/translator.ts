@@ -19,6 +19,7 @@ const translations: { [key: string]: string } = {
     "Add people to the team": "Добавить людей в команду",
     "В избранное": "Добавить",
     "В избранном": "Убрать",
+    "ИД:": "ID:",
  
 };
 
