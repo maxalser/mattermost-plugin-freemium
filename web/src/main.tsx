@@ -3,6 +3,7 @@ import type { PluginRegistry } from "~/types/mattermost";
 import type { Action, Store } from "redux";
 import manifest from "~/../../plugin.json";
 import boardsTS from "~/scripts/boards";
+import logoTS from "~/scripts/logo"; // Добавляем новый импорт
 import premiumCSS from "~/styles/premium.css?raw";
 import boardsCSS from "~/styles/boards.css?raw";
 
@@ -19,7 +20,6 @@ class Plugin {
 		// CSS INJECTION
 		const style = document.createElement("style");
 		style.textContent = [
-			// Import as raw and join the contents to be added to the DOM, additional styles can be appended here
 			premiumCSS,
 			boardsCSS,
 		].join("\n");
@@ -27,15 +27,17 @@ class Plugin {
 
 		// TS INJECTION
 		registry.registerGlobalComponent(() => {
-			// Call any script that needs to be ran in the app, additional functions can be added here
+			// Вызываем скрипты
 			boardsTS();
+			logoTS(); // Добавляем вызов нового скрипта
 
 			return null;
 		});
 	}
 
 	public uninitialize() {
-		// No cleanup needed with current implementation
+		// Очищаем кастомные логотипы при деактивации плагина
+		document.querySelectorAll('.custom-logo-freemium').forEach(el => el.remove());
 	}
 }
 
