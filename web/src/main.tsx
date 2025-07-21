@@ -4,6 +4,7 @@ import type { Action, Store } from "redux";
 import manifest from "~/../../plugin.json";
 import boardsTS from "~/scripts/boards";
 import logoTS from "~/scripts/logo"; // Добавляем новый импорт
+import { initializeTranslator } from "~/scripts/translator";
 import premiumCSS from "~/styles/premium.css?raw";
 import boardsCSS from "~/styles/boards.css?raw";
 
@@ -30,6 +31,7 @@ class Plugin {
 			// Вызываем скрипты
 			boardsTS();
 			logoTS(); // Добавляем вызов нового скрипта
+			initializeTranslator();
 
 			return null;
 		});
