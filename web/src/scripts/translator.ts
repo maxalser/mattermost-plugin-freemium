@@ -39,6 +39,9 @@ const translations: { [key: string]: string } = {
     "Filter your search with:": "Фильтр поиска:",
     "Добавить людей": "Добавить",
     "All Teams": "Все команды",
+    "Mute": "Выключить звук",
+    "Unmute": "Включить звук",
+    "Direct Messages": "Личные сообщения",
 };
 
 const translateNode = (node: Node) => {
