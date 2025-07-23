@@ -42,6 +42,7 @@ const translations: { [key: string]: string } = {
     "Mute": "Выключить звук",
     "Unmute": "Включить звук",
     "Direct Messages": "Личные сообщения",
+    "123": "123",
 };
 
 const translateNode = (node: Node) => {
