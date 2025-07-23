@@ -1,4 +1,4 @@
-/* Hide the feedback button in the boards page */
+/* H1ide the feedback button in the boards page */
 .BoardComponent .top-head .TopBar {
 	display: none !important;
 }
