@@ -102,6 +102,78 @@ div[role="dialog"]:has(> #StartTrialFormModal) {
 	}
 }
 
+/* Стили для встраиваемых плееров Kinescope */
+.kinescope-embed-freemium {
+	position: relative;
+	width: 100%;
+	max-width: 640px;
+	margin: 10px 0;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease;
+	background: #000;
+}
+
+/* Создаем соотношение сторон 16:9 */
+.kinescope-embed-freemium::before {
+	content: '';
+	display: block;
+	padding-top: 56.25%; /* 9/16 * 100% = 56.25% для соотношения 16:9 */
+}
+
+.kinescope-embed-freemium:hover {
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Адаптивные стили для экранов меньше 640px */
+@media (max-width: 640px) {
+	.kinescope-embed-freemium {
+		max-width: 100%;
+		margin: 8px 0;
+		border-radius: 6px;
+	}
+}
+
+@media (max-width: 480px) {
+	.kinescope-embed-freemium {
+		margin: 6px 0;
+		border-radius: 4px;
+	}
+}
+
+/* Стили для встраиваемых плееров Kinescope */
+.kinescope-embed-freemium {
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease;
+}
+
+.kinescope-embed-freemium:hover {
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.kinescope-embed-freemium iframe {
+	border: none;
+	background: #000;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+	.kinescope-embed-freemium {
+		margin: 8px 0;
+		border-radius: 6px;
+	}
+}
+
+@media (max-width: 480px) {
+	.kinescope-embed-freemium {
+		margin: 6px 0;
+		border-radius: 4px;
+	}
+}
+
 @media (max-width: 480px) {
 	#product_switch_menu .custom-logo-freemium-svg,
 	[class*="ProductMenuButton"] .custom-logo-freemium-svg {

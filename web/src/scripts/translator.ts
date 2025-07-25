@@ -65,6 +65,7 @@ const translations: { [key: string]: string } = {
     "Create new board": "Создать новую доску",
     "+ Добавить свойство": "Новое свойство",
     "Редактировать профиль": "Редактировать",
+    "Mattermost": "Блокси",
 };
 
 const translateNode = (node: Node) => {
